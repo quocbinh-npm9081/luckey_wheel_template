@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>binh</title>
+    <title>HanaStore - May mắn đầu xuân</title>
     <link rel="stylesheet" href="css/typo/typo.css" />
     <link rel="stylesheet" href="css/hc-canvas-luckwheel.css" />
     <style>
@@ -34,25 +34,25 @@
       var isPercentage = true;
       var prizes = [
               {
-                text: "Áo thun J2Team",
+                text: "Áo thun ",
                 img: "images/Ao.png",
                 number: 1, // 1%,
                 percentpage: 0.01 // 1%
               },
               {
-                text: "Nón J2 Team",
+                text: "Nón ",
                 img: "images/Non.png",
                 number: 1,
                 percentpage: 0.05 // 5%
               },
               {
-                text: "Vòng Tay J2Team",
+                text: "Vòng Tay ",
                 img: "images/Vong.png",
                 number : 1,
                 percentpage: 0.1 // 10%
               },
               {
-                text: "J2Team Security",
+                text: "Security",
                 img: "images/j2_logo.png",
                 number: 1,
                 percentpage: 0.24 // 24%
@@ -120,17 +120,26 @@
           switch (true) {
             case rand < prizes[4].percentpage:
               prizeIndex = 4 ;
+             console.log(prizes[prizeIndex]);
               break;
             case rand < prizes[4].percentpage + prizes[3].percentpage:
               prizeIndex = 3;
+            console.log(prizes[prizeIndex]);
+
               break;
             case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
+            console.log(prizes[prizeIndex]);
+
               prizeIndex = 2;
               break;
             case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
+              console.log(prizes[prizeIndex]);
+
               prizeIndex = 1;
               break;  
             case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage  + prizes[0].percentpage:
+              console.log(prizes[prizeIndex]);
+
               prizeIndex = 0;
               break;  
           }
